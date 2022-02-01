@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane stylesheets="welcom.css" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="student.management.system.WelcomController">
+   <children>
+      <AnchorPane fx:id="login_form" prefHeight="500.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="500.0" prefWidth="400.0" styleClass="mainFxmlClass" stylesheets="@welcom.css">
+               <children>
+                  <Label fx:id="m" layoutX="111.0" layoutY="133.0" text="S">
+                     <font>
+                        <Font name="Baskerville Old Face" size="200.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="400.0" prefHeight="500.0" prefWidth="400.0">
+               <children>
+                  <Button layoutX="349.0" layoutY="1.0" mnemonicParsing="false" onAction="#exit" prefHeight="26.0" prefWidth="33.0" styleClass="exit" stylesheets="@welcom.css" text="X" textFill="#f7f3f3" AnchorPane.leftAnchor="349.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="140.0" layoutY="155.0" text="Sign In" textFill="#662d60">
+                     <font>
+                        <Font name="Berlin Sans FB" size="36.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIcon fill="#662d60" glyphStyleClass="" iconName="USERS" layoutX="139.0" layoutY="121.0" size="8em" />
+                  <TextField fx:id="username" layoutX="103.0" layoutY="223.0" onKeyTyped="#textfeildDesign" onMouseClicked="#textfeildDesign" onMouseDragged="#textfeildDesign" prefHeight="28.0" prefWidth="220.0" promptText="user name" styleClass="textfield-design" stylesheets="@welcom.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <PasswordField fx:id="password" layoutX="103.0" layoutY="287.0" onKeyTyped="#textfeildDesign" onMouseClicked="#textfeildDesign" onMouseDragged="#textfeildDesign" prefHeight="28.0" prefWidth="220.0" promptText="password" styleClass="textfield-design" stylesheets="@welcom.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </PasswordField>
+                  <Button fx:id="login_btn" layoutX="159.0" layoutY="372.0" mnemonicParsing="false" styleClass="button-design" stylesheets="@welcom.css" text="LOG IN" textFill="#fcfafa">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Hyperlink fx:id="create_btn" layoutX="132.0" layoutY="462.0" onAction="#changeForm" text="CREATE NEW ACCOUNT" textFill="#5185c5" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="signup_form" prefHeight="500.0" prefWidth="800.0" visible="false">
+         <children>
+            <AnchorPane layoutX="400.0" prefHeight="500.0" prefWidth="400.0" styleClass="mainFxmlClass" stylesheets="@welcom.css">
+               <children>
+                  <Label fx:id="m1" layoutX="111.0" layoutY="133.0" text="M">
+                     <font>
+                        <Font name="Baskerville Old Face" size="200.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="500.0" prefWidth="400.0">
+               <children>
+                  <Button layoutX="349.0" layoutY="1.0" mnemonicParsing="false" onAction="#exit" prefHeight="26.0" prefWidth="33.0" styleClass="exit" stylesheets="@welcom.css" text="X" textFill="#f7f3f3" AnchorPane.leftAnchor="349.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="140.0" layoutY="155.0" text="Sign Up" textFill="#662d60">
+                     <font>
+                        <Font name="Berlin Sans FB" size="36.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="su_email" layoutX="103.0" layoutY="223.0" onKeyTyped="#textfeildDesign1" onMouseClicked="#textfeildDesign1" onMouseDragged="#textfeildDesign1" prefHeight="28.0" prefWidth="220.0" promptText="Email Address" styleClass="textfield-design" stylesheets="@welcom.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <PasswordField fx:id="su_password" layoutX="103.0" layoutY="320.0" onKeyTyped="#textfeildDesign1" onMouseClicked="#textfeildDesign1" onMouseDragged="#textfeildDesign1" prefHeight="28.0" prefWidth="220.0" promptText="password" styleClass="textfield-design" stylesheets="@welcom.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </PasswordField>
+                  <Button fx:id="signup_btn" layoutX="159.0" layoutY="372.0" mnemonicParsing="false" styleClass="button-design" stylesheets="@welcom.css" text="SignUp" textFill="#fcfafa">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Hyperlink fx:id="su_login_btn" layoutX="170.0" layoutY="450.0" onAction="#changeForm" text="Log In" textFill="#5185c5">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Hyperlink>
+                  <TextField fx:id="su_username" layoutX="103.0" layoutY="270.0" onKeyTyped="#textfeildDesign1" onMouseClicked="#textfeildDesign1" onMouseDragged="#textfeildDesign1" prefHeight="28.0" prefWidth="220.0" promptText="user name" styleClass="textfield-design" stylesheets="@welcom.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <FontAwesomeIcon iconName="USER_PLUS" layoutX="145.0" layoutY="129.0" selectionFill="#2f466b" size="8em" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
